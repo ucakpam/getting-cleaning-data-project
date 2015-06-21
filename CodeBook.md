@@ -21,7 +21,7 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 
 # Data Transformations
 
-The `run_analysis.R` R script transforms the raw data into a tidy data set, which is then written to the `tidy_data.txt` file.
+The `run_analysis.R` R script transforms the raw data into a tidy data set, which is then written to the `tidy_data.txt` file. The following transformations are carried out:
 
 __Merging training and test data sets__:
 Test and training signals (`X_train.txt`, `X_test.txt`), activities IDs (`y_train.txt`, `y_test.txt`), and subject IDs (`subject_train.txt`, `subject_test.txt`) are joined together to create a single data set. 
