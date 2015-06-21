@@ -21,19 +21,19 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 
 # Data Transformations
 
-The `run_analysis.R` R script transforms the raw data into a tidy data set, which is written to the `tidy_data.txt` file.
+The `run_analysis.R` R script transforms the raw data into a tidy data set, which is then written to the `tidy_data.txt` file.
 
-__Merge training and test data sets__:
+__Merging training and test data sets__:
 Test and training signals (`X_train.txt`, `X_test.txt`), activities IDs (`y_train.txt`, `y_test.txt`), and subject IDs (`subject_train.txt`, `subject_test.txt`) are joined together to create a single data set. 
 
-__Extract mean and standard deviation for each signal measurement__:
+__Extracting mean and standard deviation for each signal measurement__:
 Only the mean value and standard deviation variables (i.e., variables that contain the labels `mean()` and `std()` in `features.txt`) are extracted for each measurement.
 
-__Get descriptive activity names__:
+__Assigning descriptive activity names__:
 Activity IDs are replaced by their respective description (based on `activity_labels.txt`).
 
-__Give meaningful variable labels__:
-Each variable in the data set is given an appropriate, descriptive label. Original signal labels (from `features.txt`) are amended to remove parenthesis and give an improved description, in particular:
+__Assigning meaningful variable labels__:
+An appropriate, descriptive label is assigned to each variable in the data set. Original signal labels (from `features.txt`) are amended to remove parenthesis and give an improved description, in particular:
 
 * `t` at the start of the label is replaced with `time`,
 * `f` at the start of the label is replaced with ` frequency`,
@@ -44,7 +44,7 @@ Each variable in the data set is given an appropriate, descriptive label. Origin
 * `mean()` is replaced with `mean`, and
 * `std()` is replaced with `standardDeviation`.
 
-__Create a tidy data set__
+__Producing a tidy data set__
 A tidy data set is created from the intermediate data set, where the average of each signal variable is calculated for each activity and subject.
 
 # Tidy Data Set
